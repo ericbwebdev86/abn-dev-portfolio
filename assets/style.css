@@ -1,4 +1,6 @@
-* {
-    font-size: 100px;
-    color:red;
+:root {
+    font-family: 'Roboto Condensed', sans-serif;
 }
+/* header/nav start */
+
+/* header/nav end */
