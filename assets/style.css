@@ -13,6 +13,9 @@ html,body
     padding: 0px;
     overflow-x: hidden; 
 }
+.section-title {
+    font-size: 60px;
+}
 /* header/nav start */
 header {
     background-color: black;
@@ -81,13 +84,11 @@ header nav ul a:hover {
 .my-work {
     margin-bottom: 20px;
 }
-.my-work h3 {
-    font-size: 40px ;
-    text-align: center;
+.my-work .section-title {
+    /* text-align: center; */
     color: green;
-    padding-top: 15px;
 }
-.my-work h3:after {
+/* .my-work .section-title:after {
     content:"";
     display: block;
     margin: 0 auto;
@@ -95,7 +96,7 @@ header nav ul a:hover {
     padding-top: 20px;
     border-bottom:solid 4px rgba(33, 131, 3, 0.3);
 
-}
+} */
 .project-container {
     display:flex;
     flex-wrap:wrap;
@@ -131,24 +132,65 @@ header nav ul a:hover {
 .about-me {
     background: black;
     display: flex;
-    height: 550px;
-    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
 }
-
-.about-me-info {
-    width:300px;
-    height:500px;
+.about-me .section-title {
     color: white;
 }
-.about-me-info h3 {
-    font-size:3em;
-    text-align:center;
+.about-me-info {
+    color: white;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    margin: 0 auto;
 }
+
 .about-me-info p {
+    width:300px;
+    height:500px;
     padding:5px;
-    font-size:1.2em;
+    font-size:20px;
 }
 /* about me end */
+
+/* connect start */
+
+
+.connect {
+    background: linear-gradient(50deg, darkgray,black);
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+    color: white;
+}
+
+.connect .section-title {
+    padding-right: 200px;
+}
+.connect-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    justify-content:space-evenly;
+    height: 300px;
+}
+.connect-links a {
+    font-size:20px;
+    text-decoration: none;
+    color: white;
+    transition-duration:0.5s;
+    transition-delay: 0.25s;
+}
+.connect-links a:hover {
+    color: green;
+    font-size: 30px;
+    padding-bottom: 2px;
+}
+/* connect end */
 
 /* footer start */
 footer {
@@ -156,40 +198,11 @@ footer {
     color:white;
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 10px 10px;
 }
-footer p {
-    padding-right: 10px;
-}
-footer a{
-    padding: 0 10px;
-    text-decoration:none;
-    color: white;
-    transition-duration:0.5s;
-    transition-delay: 0.25s;
-}
 
-footer a:hover {
-    color: green;
-    font-size: 1.2em;
-    padding-bottom: 2px;
-}
-
-footer img {
-    width:30px;
-    height:30px;
-    transition-duration: .3s;
-    transition-delay: .15s;
-}
-footer img:hover {
-    width:55px;
-    height: 55px;
-}
-.footer-links {
-    display: flex;
-    justify-content:space-between;
-}
 /* footer end */
 
 /* media queries */
@@ -230,6 +243,9 @@ footer img:hover {
     .intro p {
         font-size: 1.7em;
     }
+    .about-me {
+        align-items: center;
+    }
 }
 
 @media screen and (max-width:370px) {
@@ -248,9 +264,27 @@ footer img:hover {
     header nav ul li a {
         font-size: 1.2em;
     }
+    .about-me {
+        height:100%;
+        width: 100%;
+    }
+    .about-me-info p {
+        width:100%;
+        height:100%;
+        padding:5px;
+        font-size:20px;
+    }
+    .connect {
+        padding: 5px;
+    }
+    
+    .connect .section-title {
+        padding-right: 0;
+    }
     footer {
         flex-direction:column;
         align-items: center;
+        /* height: 100%; */
     }
     .footer-links {
         flex-direction:column;
