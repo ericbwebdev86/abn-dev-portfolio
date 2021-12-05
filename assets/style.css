@@ -16,7 +16,7 @@ header {
 header h1 {
     font-size:40px;
     margin:0;
-   
+    padding-left: 10px;
 }
 header h1 a {
     text-decoration:none;
@@ -35,7 +35,7 @@ header nav ul li {
 }
 header nav ul li a {
     padding: 10px 15px;
-    font-size: 1.7vw;
+    font-size: 1.8em;
     color: white;
     text-decoration: none;
     transition-duration:0.5s;
@@ -54,26 +54,25 @@ header nav ul a:hover {
     background-position:center;
     display: flex;
     flex-wrap: wrap;
-    align-items:flex-start;
 }
 .intro {
-    border: 3px solid rgba(231, 235, 226, 0.3);
     padding: 20px;
-    margin: 10.5% 10.5% 10.5% 2.5%;
+    margin: 17.5% 10.5%;
     border-radius: 10px;
-    color: rgba(250, 250, 250, 0.5);
-    
+    color: white;
 }
 .intro h2 {
-    font-size: 5vw;
+    font-size: 3.2em;
 }
 .intro p {
-    font-size: 2.5vw;
+    font-size: 2.7em;
 }
 /* hero end */
 
 /* my work start */
-
+.my-work {
+    margin-bottom: 20px;
+}
 .my-work h3 {
     font-size: 40px ;
     text-align: center;
@@ -94,7 +93,7 @@ header nav ul a:hover {
     flex-wrap:wrap;
     justify-content: space-between;
     padding-top: 20px;
-    height: 700px;
+    /* height: 700px; */
     
 }
 .project {
@@ -122,47 +121,56 @@ header nav ul a:hover {
 
 /* about me start */
 .about-me {
-    background-image: url("./images/abn-jump2.jpg");
-    background-size: cover;
-    background-position:center;
+    background: black;
     display: flex;
-    height: 500px;
+    height: 550px;
+    justify-content: center;
 }
 
 .about-me-info {
     width:300px;
     height:500px;
-    padding:50px;
-    color: darkgreen;
+    color: white;
 }
 .about-me-info h3 {
-    font-size:x-large;
+    font-size:3em;
+    text-align:center;
 }
 .about-me-info p {
-    background:rgba(231, 235, 226, 0.3);
-    border: 1px solid darkgreen;
     padding:5px;
+    font-size:1.2em;
 }
 /* about me end */
 
 /* footer start */
 footer {
     background: black;
-    color:darkgreen;
+    color:white;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items:center;
-    bottom:0;
-    height: 100px;
+    justify-content: center;
+    padding: 10px 10px;
+}
+footer p {
+    padding-right: 10px;
+}
+footer a{
     padding: 0 10px;
+    text-decoration:none;
+    color: white;
+    transition-duration:0.5s;
+    transition-delay: 0.25s;
 }
-footer p{
-    font-size:larger;
+
+footer a:hover {
+    color: green;
+    font-size: 1.2em;
+    padding-bottom: 2px;
 }
-footer img{
-    width:50px;
-    height:50px;
+
+footer img {
+    width:30px;
+    height:30px;
     transition-duration: .3s;
     transition-delay: .15s;
 }
@@ -170,4 +178,72 @@ footer img:hover {
     width:55px;
     height: 55px;
 }
+.footer-links {
+    display: flex;
+    justify-content:space-between;
+}
 /* footer end */
+
+/* media queries */
+
+@media screen and (max-width:980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    header nav ul li a {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .about-me { 
+        justify-content: center;
+    }
+    .about-me-info p {
+        padding:5px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .intro h2 {
+        font-size: 2.2em;
+    }
+    .intro p {
+        font-size: 1.7em;
+    }
+}
+
+@media screen and (max-width:370px) {
+    * {
+        width:100%;
+    }
+    .intro h2 {
+        font-size: 2.2em;
+    }
+    .intro p {
+        font-size: 1.7em;
+    }
+    .about-me {
+        height: 100%;
+    }
+    footer {
+        height: 100%;
+    }
+    .about-me-info h3 {
+        text-align:center;
+    }
+    .about-me-info p {
+        padding:5px;
+    }
+}
