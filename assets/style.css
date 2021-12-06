@@ -117,9 +117,9 @@ header nav ul a:hover {
     transition-delay: .25s;
 }
 .project img:hover {
-    width:315px;
-    height:315px;
-    padding-bottom:5px;
+    width:400px;
+    height:400px;
+    padding-bottom:15px;
 }
 .project p {
     color: green;
@@ -134,9 +134,13 @@ header nav ul a:hover {
     display: flex;
     height: 100%;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .about-me .section-title {
     color: white;
+}
+.about-me img {
+    padding-right: 100px;
 }
 .about-me-info {
     color: white;
@@ -200,7 +204,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px 10px;
+    padding: 10px;
 }
 
 /* footer end */
@@ -226,13 +230,44 @@ footer {
         font-size: 1.5em;
     }
 }
-
-@media screen and (max-width:768px) {
+@media screen and (max-width: 915px) {
     .about-me { 
-        justify-content: center;
+        height: 120%;
+        align-items: center;
+    }
+    .about-me .section-title {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .about-me img {
+        align-items: center;
+        padding-right: 10px;
+        height: 407px;
+        width: 304.5px;
+        margin: 0 auto;
     }
     .about-me-info p {
         padding:5px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .connect {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .about-me { 
+        align-items:center;
+        height: 140%;
+    }
+    .connect .section-title {
+        padding-right: 5px;
+    }
+    .about-me-info p {
+        padding:0;
+        text-align: justify;
+        width: 100%
     }
 }
 
@@ -245,11 +280,11 @@ footer {
     }
     .about-me {
         align-items: center;
+        height: 120%
     }
 }
 
 @media screen and (max-width:370px) {
-    
     header h1 {
         font-size:4em;
         margin:0;
@@ -264,29 +299,26 @@ footer {
     header nav ul li a {
         font-size: 1.2em;
     }
+    .project img {
+        width: 250px;
+        height: 250px;
+    }
     .about-me {
-        height:100%;
-        width: 100%;
+        align-items: center;
+        height: 140%
+    }
+    .about-me img {
+        padding-right: 0;
+        height: 307px;
+        width: 204.5px;
     }
     .about-me-info p {
-        width:100%;
-        height:100%;
-        padding:5px;
-        font-size:20px;
+        text-align:justify;
     }
     .connect {
         padding: 5px;
     }
-    
-    .connect .section-title {
-        padding-right: 0;
-    }
     footer {
-        flex-direction:column;
-        align-items: center;
-        /* height: 100%; */
-    }
-    .footer-links {
         flex-direction:column;
         align-items: center;
     }
