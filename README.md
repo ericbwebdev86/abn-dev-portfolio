@@ -15,8 +15,7 @@ This is a simple portfolio site that will showcase my work. It is an active work
 
 ## Installation
 ### Clone Repository
-* *https:* git clone [https://github.com/p-fassbender/my-outdoor-space.git](https://github.com/p-fassbender/my-outdoor-space.git)
-* *ssh:* git clone [git@github.com:p-fassbender/my-outdoor-space.git](git@github.com:p-fassbender/my-outdoor-space.git)
+* *https:* git clone [https://github.com/ericbwebdev86/abn-dev-portfolio.git](https://github.com/ericbwebdev86/abn-dev-portfolio.git)
 
 ## Tests
 There are no formal tests for this project
